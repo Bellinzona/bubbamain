@@ -2,7 +2,6 @@ import React from 'react'
 import { Navbar } from '../componentes/Navbar/Navbar'
 import { Carrousel } from '../componentes/Carrousel/Carrousel'
 import { Productos } from '../componentes/Productos/Productos'
-import { Footer } from '../componentes/Footer/footer'
 
 
 export const Home = () => {
@@ -15,7 +14,7 @@ export const Home = () => {
 
         <Productos></Productos>
         
-        <Footer></Footer>
+       
 
         
 

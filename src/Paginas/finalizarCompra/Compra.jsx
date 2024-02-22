@@ -2,7 +2,6 @@ import React, { useContext, useState } from 'react'
 import { Navbar } from '../../componentes/Navbar/Navbar'
 import { contextoProvider } from '../../contexto/Contexto'
 import "./Compra.css"
-import { Footer } from '../../componentes/Footer/footer'
 import { initMercadoPago, Wallet } from '@mercadopago/sdk-react'
 import axios from "axios"
 import Swal from "sweetalert2"
@@ -193,7 +192,6 @@ export const Compra = () => {
 
 
 
-      <Footer></Footer>
 
     </div>
   )
