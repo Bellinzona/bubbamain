@@ -1,0 +1,149 @@
+.CarritoLugar{
+    position: absolute;
+    display: flex;
+    justify-content: end;
+    width: 95%;
+    left: 4.5%;
+    top: 16%;
+    z-index: 1000;
+}
+
+.CarritoLugar.visible {
+    display: flex;
+  }
+  
+
+@keyframes aparecerDesdeDerecha {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+
+.Carro{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    background-color: white;
+    box-shadow: 0px 0px 15px -5px;
+    animation: aparecerDesdeDerecha 0.8s ease-in-out;
+    text-align: center;
+
+    
+}
+
+.Carro .Productos{
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  width: 90%;
+  height: auto;
+  box-shadow: 0px 0px 7px -3px;
+  cursor: pointer;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.Carro img{
+  width: 20%;
+  border-radius: 50%;
+  margin: auto 10px;
+  
+}
+
+.Productos button{
+  margin: 5px;
+  padding: 5px 20px;
+  display: flex;
+  align-items: center;
+  color: white;
+  justify-content: center;
+}
+
+.Productos .mas{
+  background-color: rgb(34, 181, 34);
+}
+
+.Productos .menos{
+  background-color: rgb(226, 22, 22);
+}
+
+.finalizarCompra{
+  width: 65%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  margin-top: 0;
+  padding: 22px;
+  font-size: 15px;
+  height: 5px;
+  color: white;
+}
+
+.botones{
+  display: flex;
+}
+@media screen and (max-width: 1440px){
+  .CarritoLugar{
+    top: 10%;
+  }
+
+}
+@media screen and (max-width: 1024px){
+  .CarritoLugar{
+    top: 10%;
+  }
+
+  .Productos p {
+    font-size: 1rem;
+  }
+
+
+}
+@media screen and (max-width: 768px) {
+  .Carro{
+    width: 40%;
+  }
+
+  .CarritoLugar{
+    top: 10%;
+  }
+
+  .Productos button{
+    margin: 5px;
+    padding: 4px 15px;
+    display: flex;
+    align-items: center;
+    color: white;
+    justify-content: center;
+  }
+
+  .Productos p {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .Carro{
+    width: 80%;
+  }
+
+  .CarritoLugar{
+    top: 12%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .Carro{
+    width: 80%;
+  }
+
+  .CarritoLugar{
+    top: 12%;
+  }
+}

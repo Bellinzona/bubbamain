@@ -1,0 +1,68 @@
+.carrito{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    margin-left: 40px;
+    margin-bottom: 18px;
+    position: relative;
+    cursor: pointer;
+}
+
+.carrito img{
+    width: 95%;
+}
+
+.carrito span{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    padding: 8px 10px;
+    color: white;
+    font-weight: 500;
+    top: 25px;
+    right: -14px;
+    height: 20px;
+    border-radius: 100%;
+    box-shadow: 0px 0px 10px -8px black;
+
+}
+
+@media screen and (max-width: 768px) {
+    .carrito{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 45px;
+        height: 45px;
+        margin-left: 40px;
+        margin-bottom: 18px;
+        padding: 0px 15px;
+        position: relative;
+        cursor: pointer;
+    }
+
+    
+}
+
+
+@media screen and (max-width: 425px){
+    .carrito{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        margin-left: 40px;
+        margin-bottom: 18px;
+        padding: 0px 15px;
+        position: relative;
+        cursor: pointer;
+    }
+
+    
+
+}
