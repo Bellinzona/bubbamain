@@ -9,12 +9,8 @@ export const CompraFinalizada = () => {
 
 
   useEffect(() => {
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    const collectionStatus = urlParams.get('collection_status');
-    const paymentId = urlParams.get('payment_id');
 
-    fetch(`https://deluxe-jalebi-133777.netlify.app/CompraFinalizada?collection_status=${collectionStatus}&payment_id=${paymentId}`)
+    fetch(`https://bs-i4ni.onrender.com/CompraFinalizada`)
       .then(response => response.json())
       .then(data => setPaymentInfo(data))
       .catch(error => console.error('Error al obtener la información del pago:', error));
