@@ -14,7 +14,7 @@ export const CompraFinalizada = () => {
     const collectionStatus = urlParams.get('collection_status');
     const paymentId = urlParams.get('payment_id');
 
-    fetch(`http://localhost:8080/CompraFinalizada?collection_status=${collectionStatus}&payment_id=${paymentId}`)
+    fetch(`https://deluxe-jalebi-133777.netlify.app/CompraFinalizada?collection_status=${collectionStatus}&payment_id=${paymentId}`)
       .then(response => response.json())
       .then(data => setPaymentInfo(data))
       .catch(error => console.error('Error al obtener la información del pago:', error));
