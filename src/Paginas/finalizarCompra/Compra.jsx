@@ -171,7 +171,7 @@ export const Compra = () => {
           <p>Local a Retirar</p>
           <select value={local} onChange={(e) => setLocal(e.target.value)}>
             <option value="Curapaligue 47">Curapaligue 47</option>
-            <option value="Avenida Rivadavia 47">Avenida Rivadavia 6027</option>
+            <option value="Avenida Rivadavia 6027">Avenida Rivadavia 6027</option>
           </select>
 
           <button className="Pagar" onClick={(e) => btnComprar(e, total)}>
