@@ -7,6 +7,7 @@ import milanesaPromo from "../../assets/AA.jpg"
 import frescosArtesanales from "../../assets/Frescos-Artesanales.jpg"
 import imagenMila from "../../assets/imagenMila.jpg"
 import mensajeC from "../../assets/MensajeAA.jpg" 
+import mediosPago from "../../assets/MediosPago.jpg"
 
 export const Carrousel = () => {
   const params = {
@@ -42,6 +43,7 @@ export const Carrousel = () => {
         <img src={frescosArtesanales} alt="Milanesas" />
         <img src={imagenMila} alt="Milanesas" />
         <img src={mensajeC} alt="Milanesas" />
+        <img src={mediosPago} alt="Milanesas" />
         {/* ... Otras imágenes ... */}
       </Carousel>
     </div>
