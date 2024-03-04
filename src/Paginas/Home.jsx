@@ -21,7 +21,7 @@ export const Home = () => {
     <h3>Contacto :</h3>
 
     <p>Bubbamilanesas912@gmail.com</p>
-    <p>📱 1136181253</p>
+    <p>📱 1123150263</p>
     
 
 
