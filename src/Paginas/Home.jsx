@@ -31,7 +31,7 @@ export const Home = () => {
     <h3>Locales :</h3>
 
     <p>Curappaligue 47</p>
-    <p>Avenida Rivadavia 47</p>
+    <p>Avenida Rivadavia 6027</p>
 
 
 

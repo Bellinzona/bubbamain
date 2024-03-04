@@ -47,7 +47,7 @@ export const Compra = () => {
 
   }, [])
 
-  console.log(telefono,nombre,apellido)
+
 
 
 
@@ -171,7 +171,7 @@ export const Compra = () => {
           <p>Local a Retirar</p>
           <select value={local} onChange={(e) => setLocal(e.target.value)}>
             <option value="Curapaligue 47">Curapaligue 47</option>
-            <option value="Avenida Rivadavia 47">Avenida Rivadavia 47</option>
+            <option value="Avenida Rivadavia 47">Avenida Rivadavia 6027</option>
           </select>
 
           <button className="Pagar" onClick={(e) => btnComprar(e, total)}>
@@ -207,8 +207,8 @@ export const Compra = () => {
 <div className="informaciones">
     <h3>Locales :</h3>
 
-    <p>Curappaligue 47</p>
-    <p>Avenida Rivadavia 47</p>
+    <p>Curapaligue 47 - Flores</p>
+    <p>Avenida Rivadavia 6027 - Caballito</p>
 
 
 

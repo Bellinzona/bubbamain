@@ -39,7 +39,7 @@ export const Productos = () => {
   return (
     <section ref={productosRef} className='Productos' id='productos'>
 
-      <h1>Nuestros Productos</h1>
+      <h1>Productos</h1>
 
       <div className='MiniNav'>
         <a onClick={() => filtrarProductos(null)}>Todos</a>
