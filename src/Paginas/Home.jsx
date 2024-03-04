@@ -30,8 +30,8 @@ export const Home = () => {
 <div className="informaciones">
     <h3>Locales :</h3>
 
-    <p>Curappaligue 47</p>
-    <p>Avenida Rivadavia 6027</p>
+    <p>Curapaligue 47 - Flores</p>
+    <p>Avenida Rivadavia 6027 - Caballito</p>
 
 
 
