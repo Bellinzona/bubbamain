@@ -114,7 +114,7 @@ export const Compra = () => {
 
       <div className="estasLlevando" id='productos'>
 
-        <h1>Estas Llevando :</h1>
+        <h1 className='textEL'>Estas Llevando :</h1>
 
         {arrayDeObjetos.length === 0 ? (
           <p>no hay nada en el carrito</p>
@@ -145,7 +145,7 @@ export const Compra = () => {
 
         <div className="totalLlevado">
 
-          <p>Total : {total}</p>
+          <p>Total: ${total}</p>
         </div>
 
 
