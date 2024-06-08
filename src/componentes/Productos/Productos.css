@@ -9,6 +9,7 @@
 
 .MiniNav {
   margin: 20px auto;
+  margin-bottom: 0px;
 }
 
 .MiniNav a {
@@ -20,6 +21,7 @@
   position: relative;
   transition: color 0.3s; /* Agrega una transición para suavizar el cambio de color */
   cursor: pointer;
+  margin-bottom: 0px;
 }
 
 .MiniNav a:hover {
@@ -52,6 +54,8 @@
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 10px;
+
 }
 
 article {
@@ -296,6 +300,7 @@ article .btnAñadirC {
     margin: 2px 5px;
     font-size: 0.5rem;
   }
+  
 }
 
 @media screen and (max-width: 280px) {
