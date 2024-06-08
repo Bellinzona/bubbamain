@@ -4,7 +4,7 @@ import './Carousel.css';
 import Milanesas from '../../assets/Milanesas.jpg';
 import FlechaDerecha from "../../assets/flechaD.png"
 import milanesaPromo from "../../assets/AA.jpg"
-import frescosArtesanales from "../../assets/Frescos-Artesanales.jpg"
+import frescosArtesanales from "../../assets/Frescos-Artesanales2.jpg"
 import imagenMila from "../../assets/imagenMila.jpg"
 import mensajeC from "../../assets/MensajeAA.jpg" 
 import mediosPago from "../../assets/MediosPago.jpg"

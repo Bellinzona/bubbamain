@@ -1,91 +1,85 @@
-.Productos{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    width: 90%;
-    margin: 30px auto;
+/* Productos.css */
+.Productos {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 90%;
+  margin: 30px auto;
 }
 
-.MiniNav{
-    margin: 20px auto;
-
-
+.MiniNav {
+  margin: 20px auto;
 }
 
 .MiniNav a {
-    margin: 25px;
-    font-size: 2.1rem;
-    color: rgba(18, 18, 18, 0.884);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-decoration: none; /* Elimina el subrayado predeterminado */
-    position: relative;
-    transition: color 0.3s; /* Agrega una transición para suavizar el cambio de color */
-    cursor: pointer;
-  }
-
-  .MiniNav a:hover{
-    color: black;
-  }
-  
-  .MiniNav a:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 3px;
-    bottom: 0;
-    left: 0;
-    background-color: black; /* Color del subrayado */
-    transform: scaleX(0); /* Inicialmente, el subrayado estará oculto */
-    transform-origin: bottom left;
-    transition: transform 0.5s; /* Agrega una transición para suavizar la aparición del subrayado */
-  }
-  
-  .MiniNav a:hover:after,
-  .MiniNav a:active:after {
-    transform: scaleX(1); /* Muestra el subrayado cuando se pasa el ratón o se presiona */
-  }
-  
-  .ProductosSector{
-    width: 90%;
-    margin: 70px auto;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-
-article{
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    min-height: 250px;
-    max-height: 400px;
-    box-shadow: 0px 0px 10px -5px;
-    overflow: hidden;
-    border-radius: 10px;
-    cursor: pointer;
-    margin: 20px;
-    position: relative;
-    font-size: 1rem;
-
-  }
-
-
-article:hover{
-    box-shadow: 0px 0px 12px -3px;
-    transition: all 0.3s;
+  margin: 25px;
+  font-size: 2.1rem;
+  color: rgba(18, 18, 18, 0.884);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-decoration: none; /* Elimina el subrayado predeterminado */
+  position: relative;
+  transition: color 0.3s; /* Agrega una transición para suavizar el cambio de color */
+  cursor: pointer;
 }
 
+.MiniNav a:hover {
+  color: black;
+}
 
-article .informacion{
-    display: flex;
-    flex-direction: column;
-    font-size: 25px;
-    font-weight: 500;
-    margin: auto;
+.MiniNav a:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: black; /* Color del subrayado */
+  transform: scaleX(0); /* Inicialmente, el subrayado estará oculto */
+  transform-origin: bottom left;
+  transition: transform 0.5s; /* Agrega una transición para suavizar la aparición del subrayado */
+}
 
+.MiniNav a:hover:after,
+.MiniNav a:active:after {
+  transform: scaleX(1); /* Muestra el subrayado cuando se pasa el ratón o se presiona */
+}
+
+.ProductosSector {
+  width: 90%;
+  margin: 70px auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  min-height: 250px;
+  max-height: 420px;
+  box-shadow: 0px 0px 10px -5px;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 20px;
+  position: relative;
+  font-size: 1rem;
+}
+
+article:hover {
+  box-shadow: 0px 0px 12px -3px;
+  transition: all 0.3s;
+}
+
+article .informacion {
+  display: flex;
+  flex-direction: column;
+  font-size: 25px;
+  font-weight: 500;
+  margin: auto;
 }
 
 article p {
@@ -93,18 +87,17 @@ article p {
   font-size: 1.3rem;
 }
 
-article img{
+article img {
   height: 200px;
 }
 
-
-article .btnAñadirC{
-    width: 80%;
-    margin: 20px  auto;
-    color: white;
+article .btnAñadirC {
+  width: 80%;
+  margin: 20px auto;
+  color: white;
 }
 
-.promoSpan{
+.promoSpan {
   display: flex;
   top: 12px;
   right: 12px;
@@ -113,73 +106,49 @@ article .btnAñadirC{
   padding: 5px 15px;
   border-radius: 8px;
   position: absolute;
-
 }
 
-.promoSpan:hover{
-  background-color:rgb(17, 145, 17) ;
+.promoSpan:hover {
+  background-color: rgb(17, 145, 17);
   transition: all 0.5s;
 }
 
 @media screen and (max-width: 1024px) {
-  article{
-    display: flex;
-    flex-direction: column;
+  article {
     width: 250px;
     min-height: 150px;
     max-height: 300px;
-    box-shadow: 0px 0px 10px -5px;
-    overflow: hidden;
-    border-radius: 10px;
-    cursor: pointer;
     margin: 20px 10px;
-    position: relative;
-
   }
 
-  article .informacion{
-    display: flex;
-    flex-direction: column;
+  article .informacion {
     font-size: 10px;
-    font-weight: 500;
-    margin: auto;
+  }
 
-}
+  article p {
+    margin: 5px;
+    font-size: 1.1rem;
+  }
 
-article p {
-  margin: 5px;
-  font-size: 1.1rem;
-}
+  article img {
+    height: 150px;
+  }
 
-article img{
-  min-height: 150px;
-  max-height: 150px;
-  height: 150px;
-}
-
-article .btnAñadirC{
-  width: 80%;
-  margin: 19px  auto;
-  color: white;
-}
+  article .btnAñadirC {
+    width: 80%;
+    margin: 19px auto;
+  }
 }
 
 @media screen and (max-width: 768px) {
-  article{
-    display: flex;
-    flex-direction: column;
+  article {
     width: 220px;
     min-height: 150px;
-    max-height: 300px;
-    box-shadow: 0px 0px 10px -5px;
-    overflow: hidden;
-    border-radius: 10px;
-    cursor: pointer;
+    max-height: 320px;
     margin: 20px 10px;
-    position: relative;
   }
 
-  .promoSpan{
+  .promoSpan {
     font-size: 1rem;
     right: 5px;
   }
@@ -187,125 +156,79 @@ article .btnAñadirC{
   .MiniNav a {
     margin: 15px;
     font-size: 1.8rem;
-    color: rgba(18, 18, 18, 0.884);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-decoration: none; /* Elimina el subrayado predeterminado */
-    position: relative;
-    transition: color 0.3s; /* Agrega una transición para suavizar el cambio de color */
-    cursor: pointer;
   }
 
-  article .btnAñadirC{
-  width: 80%;
-  margin: 10px  auto;
-  margin-top: 5px;
-  color: white;
-}
+  article .btnAñadirC {
+    width: 80%;
+    margin: 10px auto;
+    margin-top: 5px;
+  }
 
-article p {
-  margin: 10px;
-  font-size: 1rem;
-}
+  article p {
+    margin: 10px;
+    font-size: 1rem;
+  }
 }
 
 @media screen and (max-width: 425px) {
-
-  article{
-    display: flex;
-    flex-direction: column;
-    width: 153px;
-    min-height: 130px;
-    max-height: 210px;
-    box-shadow: 0px 0px 10px -5px;
-    overflow: hidden;
-    border-radius: 10px;
-    cursor: pointer;
-    margin: 20px 10px;
-    position: relative;
-    font-size: 0.6rem;
+  .MiniNav a {
+    margin: 0px 5px;
+    font-size: 1rem;
   }
 
-  .promoSpan{
+  .ProductosSector {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto; /* Permite el desplazamiento horizontal */
+    white-space: nowrap; /* Evita que los elementos se envuelvan */
+  }
+
+  article {
+    width: 153px;
+    min-height: 130px;
+    max-height: 250px;
+    margin: 20px 10px;
+  }
+
+  .promoSpan {
     font-size: 0.7rem;
     right: -10px;
   }
 
-  article img{
-    min-height: 100px;
-    max-height: 130px;
+  article img {
+    height: 130px;
   }
 
-  .MiniNav{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  article .btnAñadirC {
+    width: 80%;
+    font-size: 0.6rem;
     margin: 10px auto;
+    margin-top: 5px;
   }
 
-  .ProductosSector{
-    margin: 5px auto;
-
+  article p {
+    margin: 5px;
+    font-size: 0.8rem;
   }
-
-  .MiniNav a {
-    margin: 0px 5px;
-    font-size: 1rem;
-    color: rgba(18, 18, 18, 0.884);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-decoration: none; /* Elimina el subrayado predeterminado */
-    position: relative;
-    transition: color 0.3s; /* Agrega una transición para suavizar el cambio de color */
-    cursor: pointer;
-  }
-
-  article .btnAñadirC{
-  width: 80%;
-  font-size: 0.6rem;
-  margin: 10px  auto;
-  margin-top: 5px;
-  color: white;
-}
-
-article p {
-  margin: 5px;
-  font-size: 0.2rem;
-}
-
-  
-
 }
 
 @media screen and (max-width: 320px) {
   .MiniNav a {
     margin: 0px 5px;
     font-size: 0.8rem;
-    color: rgba(18, 18, 18, 0.884);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-decoration: none; /* Elimina el subrayado predeterminado */
-    position: relative;
-    transition: color 0.3s; /* Agrega una transición para suavizar el cambio de color */
-    cursor: pointer;
   }
 
-
-  article{
-    display: flex;
-    flex-direction: column;
+  article {
     width: 153px;
     min-height: 130px;
     max-height: 210px;
-    box-shadow: 0px 0px 10px -5px;
-    overflow: hidden;
-    border-radius: 10px;
-    cursor: pointer;
     margin: 20px 10px;
-    position: relative;
     font-size: 0.5rem;
   }
-
 }
 
-.FooterMain{
+.FooterMain {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -315,7 +238,7 @@ article p {
   min-height: 15vh;
 }
 
-.informaciones{
+.informaciones {
   display: flex;
   flex-direction: column;
   color: white;
@@ -333,68 +256,55 @@ article p {
 
 @media screen and (max-width: 768px) {
   .informaciones p {
-      margin: 2px 20px;
-      font-size: 0.8rem;
+    margin: 2px 20px;
+    font-size: 0.8rem;
   }
-
 }
 
 @media screen and (max-width: 430px) {
-
-  .FooterMain{
+  .FooterMain {
     flex-direction: column;
   }
 
-  .informaciones{
+  .informaciones {
     margin: 5px;
     width: 200px;
     align-items: center;
-
   }
-  
-
 
   .informaciones p {
-      margin: 2px 5px;
-      font-size: 0.6rem;
+    margin: 2px 5px;
+    font-size: 0.6rem;
   }
-
-  
-
 }
-
 
 @media screen and (max-width: 425px) {
   .informaciones p {
-      margin: 2px 5px;
-      font-size: 0.6rem;
+    margin: 2px 5px;
+    font-size: 0.6rem;
   }
 
-  
-
+  .ProductosSector {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 320px) {
   .informaciones p {
-      margin: 2px 5px;
-      font-size: 0.5rem;
+    margin: 2px 5px;
+    font-size: 0.5rem;
   }
-
-  
-
 }
-
 
 @media screen and (max-width: 280px) {
   .informaciones p {
-      margin: 2px 5px;
-      font-size: 0.4rem;
+    margin: 2px 5px;
+    font-size: 0.4rem;
   }
 
-  .informaciones h3{
-      font-size: 0.8rem;
+  .informaciones h3 {
+    font-size: 0.8rem;
   }
-
-  
-
 }
