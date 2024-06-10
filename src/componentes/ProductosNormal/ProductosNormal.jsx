@@ -12,6 +12,11 @@ export const ProductosNormal = ({ productoss }) => {
         setProductos(productoss); // Establece productos como los productos filtrados
     }, [productoss]);
 
+
+    const handleComprar = (nombre, precio, imagen) => {
+        crearObjeto(nombre, precio, 1, imagen);
+      };
+
     return (
         <div className='ProductosSectorTodos'>
             {productos && productos.map((item, index) => (

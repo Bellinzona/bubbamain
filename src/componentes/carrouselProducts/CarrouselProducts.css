@@ -1,9 +1,16 @@
+.contanierCar{
+    position: relative;
+    
+}
+
+
 .containerArticle{
     display: flex;
-    width: 80%;
+    width: 100%;
     align-items: center;
     justify-content: center;
-    margin: auto;
+    margin: 0;
+    
 }
 
 
@@ -19,4 +26,23 @@
 .carousel-container{
     width: 80%;
     margin: auto;
+    
+}
+
+
+.cargando {
+    margin: auto;
+    position: relative;
+    width: 100vh;
+}
+
+
+@media screen and (max-width: 425px) {
+
+    .carousel-container{
+        width: 100%;
+        margin: auto;
+        
+    }
+    
 }

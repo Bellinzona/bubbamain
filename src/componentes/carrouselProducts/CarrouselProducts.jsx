@@ -4,8 +4,11 @@ import 'react-multi-carousel/lib/styles.css';
 import { contextoProvider } from '../../contexto/Contexto';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../../firebase/config';
+import { tailspin } from 'ldrs'
 
 import "./CarrouselProducts.css"
+
+tailspin.register()
 
 export const CarrouselProducts = () => {
     const { crearObjeto, arrayDeObjetos } = useContext(contextoProvider);
@@ -24,10 +27,17 @@ export const CarrouselProducts = () => {
         });
     }, []);
 
-    // Esta función filtra los productos según la categoría
-   
+    
 
-    console.log(productos)
+
+    const handleComprar = (nombre, precio, imagen) => {
+        crearObjeto(nombre, precio, 1, imagen);
+    };
+
+    // Esta función filtra los productos según la categoría
+
+
+
 
     const responsive = {
         desktop: {
@@ -42,13 +52,13 @@ export const CarrouselProducts = () => {
         },
         mobile: {
             breakpoint: { max: 464, min: 0 },
-            items: 1,
-            slidesToSlide: 1, // optional, default to 1.
+            items: 2,
+            slidesToSlide: 2, // optional, default to 1.
         },
     };
 
     return (
-        <div>
+        <div className='contanierCar'>
             <Carousel
                 swipeable={true}
                 draggable={true}
@@ -64,7 +74,7 @@ export const CarrouselProducts = () => {
                 containerClass="carousel-container"
                 removeArrowOnDeviceType={["tablet", "mobile"]}
                 dotListClass="custom-dot-list-style"
-                
+
                 partialVisible={false}
             >
                 {productos ? (
@@ -82,8 +92,18 @@ export const CarrouselProducts = () => {
                         </div>
                     ))
                 ) : (
-                        <p>Cargando...</p>
-                    )}
+                    <div className='cargando'>
+
+                        <l-tailspin
+                            size="220"
+                            stroke="5"
+                            speed="0.9"
+                            color="black"
+                        ></l-tailspin>
+
+
+                    </div>
+                )}
             </Carousel>
         </div>
     );

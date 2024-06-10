@@ -40,6 +40,8 @@ export const Productos = () => {
     }
   };
 
+ 
+
   return (
     <section ref={productosRef} className='Productos' id='productos'>
       <h1>Productos</h1>
