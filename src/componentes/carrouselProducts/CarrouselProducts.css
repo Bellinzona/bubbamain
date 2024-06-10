@@ -1,0 +1,22 @@
+.containerArticle{
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+
+.articleCarrousel{
+    margin: 40px 10px;
+
+}
+
+
+
+
+
+.carousel-container{
+    width: 80%;
+    margin: auto;
+}

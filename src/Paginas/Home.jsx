@@ -2,6 +2,8 @@ import React from 'react'
 import { Navbar } from '../componentes/Navbar/Navbar'
 import { Carrousel } from '../componentes/Carrousel/Carrousel'
 import { Productos } from '../componentes/Productos/Productos'
+import { CarrouselProducts } from '../componentes/carrouselProducts/CarrouselProducts'
+import { ProductosNormal } from '../componentes/ProductosNormal/ProductosNormal'
 
 
 export const Home = () => {
@@ -11,8 +13,15 @@ export const Home = () => {
         <Navbar></Navbar>
         
         <Carrousel></Carrousel>
+        
 
         <Productos></Productos>
+
+        
+
+        
+
+        
 
 
         <div className='FooterMain' id='footer'>
