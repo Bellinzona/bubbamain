@@ -1,33 +1,29 @@
-import React from 'react';
-import { withRouter } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
+function ErrorBoundary({ children }) {
+  const [hasError, setHasError] = useState(false);
+  const navigate = useNavigate();
 
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
+  useEffect(() => {
+    if (hasError) {
+      navigate('/');
+    }
+  }, [hasError, navigate]);
 
-  componentDidCatch(error, errorInfo) {
+  const getDerivedStateFromError = (error) => {
+    setHasError(true);
+  };
+
+  const componentDidCatch = (error, errorInfo) => {
     console.error("Uncaught error:", error, errorInfo);
+  };
+
+  if (hasError) {
+    return null; // O puedes renderizar un fallback UI temporal aquí.
   }
 
-  componentDidUpdate() {
-    if (this.state.hasError) {
-      this.props.history.push('/error');
-    }
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return null; // O puedes renderizar un fallback UI temporal aquí.
-    }
-
-    return this.props.children;
-  }
+  return children;
 }
 
-export default withRouter(ErrorBoundary);
+export default ErrorBoundary;
