@@ -1,4 +1,7 @@
 .contanierCar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     
 }
@@ -30,10 +33,12 @@
 }
 
 
-.cargando {
+.contanierCar .cargando { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: auto;
     position: relative;
-    width: 100vh;
 }
 
 

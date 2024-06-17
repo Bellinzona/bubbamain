@@ -7,6 +7,7 @@ import { db } from '../../firebase/config';
 import { tailspin } from 'ldrs'
 
 import "./CarrouselProducts.css"
+import Swal from 'sweetalert2';
 
 tailspin.register()
 
@@ -32,6 +33,16 @@ export const CarrouselProducts = () => {
 
     const handleComprar = (nombre, precio, imagen) => {
         crearObjeto(nombre, precio, 1, imagen);
+
+        Swal.fire({
+            text: 'Se añadio al carrito',
+            confirmButtonText: 'ok',
+            toast: true,
+            position: 'top-right',
+            timer:800
+          })
+
+        
     };
 
     // Esta función filtra los productos según la categoría
@@ -95,10 +106,11 @@ export const CarrouselProducts = () => {
                     <div className='cargando'>
 
                         <l-tailspin
-                            size="220"
+                            size="100"
                             stroke="5"
                             speed="0.9"
                             color="black"
+                            
                         ></l-tailspin>
 
 

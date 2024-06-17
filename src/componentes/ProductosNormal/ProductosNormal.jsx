@@ -3,6 +3,7 @@ import { contextoProvider } from '../../contexto/Contexto';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../../firebase/config';
 import "./ProductosNormal.css"
+import Swal from 'sweetalert2';
 
 export const ProductosNormal = ({ productoss }) => {
     const { crearObjeto, arrayDeObjetos } = useContext(contextoProvider);
@@ -15,6 +16,14 @@ export const ProductosNormal = ({ productoss }) => {
 
     const handleComprar = (nombre, precio, imagen) => {
         crearObjeto(nombre, precio, 1, imagen);
+
+        Swal.fire({
+            text: 'Se añadio al carrito',
+            confirmButtonText: 'ok',
+            toast: true,
+            position: 'top-right',
+            timer:800
+          })
       };
 
     return (

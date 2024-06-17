@@ -14,7 +14,7 @@ export const CompraFinalizada = () => {
 
   useEffect(() => {
 
-    fetch(`https://bs-i4ni.onrender.com/CompraFinalizada`)
+    fetch(`http://localhost:8080/CompraFinalizada`)
       .then(response => response.json())
       .then(data => setPaymentInfo(data))
       .catch(error => console.error('Error al obtener la información del pago:', error));
@@ -37,6 +37,8 @@ export const CompraFinalizada = () => {
           telefono: paymentInfo.RequestBodyInfo.telefono,
           IdCompra: paymentInfo.QueryParams.payment_id
         };
+
+        console.log(paymentInfo)
   
         try {
           // Referencia a la colección en tu base de datos
