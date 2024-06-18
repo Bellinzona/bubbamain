@@ -29,12 +29,7 @@ export const CarrouselProducts = () => {
     }, []);
 
 
-    const prueba = {
-        nombre: "prueba",
-        Precio:1,
-        imagen:"https://www.fcbarcelona.com/photo-resources/2022/08/02/ae5252d1-b79b-4950-9e34-6e67fac09bb0/LeoMessi20092010_pic_fcb-arsenal62.jpg?width=1200&height=750"
-    }
-
+    
     
 
 
@@ -105,7 +100,7 @@ export const CarrouselProducts = () => {
                                     <p>{item.Nombre}</p>
                                     <p>$ {prueba.Precio}</p>
                                 </div>
-                                <button onClick={() => handleComprar(item.Nombre, prueba.Precio, item.Imagen)} className='btnAñadirC'>Añadir al Carrito</button>
+                                <button onClick={() => handleComprar(item.Nombre, item.Precio, item.Imagen)} className='btnAñadirC'>Añadir al Carrito</button>
                             </article>
 
                             
