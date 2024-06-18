@@ -8,18 +8,18 @@ export const CompraFinalizada = () => {
   const [paymentInfo, setPaymentInfo] = useState(null);
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
-  const collectionStatus = urlParams.get('collection_status');
-  const paymentId = urlParams.get('payment_id');
+  const collectionStatus = urlParams.get('collection_status'); //NO ES LA DE FINALIZAR COMPRA NO CONFUNDIRSE
+
 
 
   useEffect(() => {
 
-    fetch(`http://localhost:8080/CompraFinalizada`)
+    fetch(`https://bs-i4ni.onrender.com/CompraFinalizada`)
       .then(response => response.json())
       .then(data => setPaymentInfo(data))
       .catch(error => console.error('Error al obtener la información del pago:', error));
 
-
+  
 
   }, []);
 
@@ -38,36 +38,30 @@ export const CompraFinalizada = () => {
           IdCompra: paymentInfo.QueryParams.payment_id
         };
 
-        console.log(paymentInfo)
-  
-        try {
-          // Referencia a la colección en tu base de datos
-          const pagosCollection = collection(db, 'Pagos');
-  
-          // Agregar un nuevo documento con la información del pago
-          const nuevoPago = await addDoc(pagosCollection, clienteData);
-  
-          
-        } catch (error) {
-          console.error('Error al guardar la información del pago:', error);
-        }
+
+
+
       }
     };
-  
+
     guardarInformacion();
   }, [paymentInfo]);
-  
+
 
 
   return (
+
+
     <div className='CompraFinalizada'>
 
+      {collectionStatus ? (
 
-
-      <h3 className='aaa'>Tu compra se realizo con exito</h3>
-
-      {paymentInfo && paymentInfo.RequestBodyInfo && (
         <>
+
+          <h3 className='aaa'>Tu compra se realizo con exito</h3>
+
+
+
           <p>Nombre: {paymentInfo?.RequestBodyInfo?.nombre ?? 'No disponible'}</p>
           <p>Producto: {paymentInfo?.RequestBodyInfo?.description ?? 'No disponible'} ${paymentInfo?.RequestBodyInfo?.price ?? 'No disponible'}</p>
           <p>Local: {paymentInfo?.RequestBodyInfo?.local ?? 'No disponible'}</p>
@@ -75,7 +69,7 @@ export const CompraFinalizada = () => {
           <p>Id de la compra: {paymentInfo?.QueryParams?.payment_id ?? 'No disponible'}</p>
 
         </>
-      )}
+      ) : <p>NO DISPONIBLE</p>}
 
 
 
