@@ -55,7 +55,7 @@ export const Compra = () => {
     try {
 
       const descripcionProductos = obtenerNombresProductos();
-      const response = await axios.post("http://localhost:8080/create_preference", {
+      const response = await axios.post("https://bs-i4ni.onrender.com/create_preference", {
         description: descripcionProductos, // Usa la descripción generada por obtenerNombresProductos
         price: Precio,
         quantity: 1,
