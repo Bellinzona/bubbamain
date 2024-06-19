@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom'
 import { Home } from '../Paginas/Home'
 import { Compra } from '../Paginas/finalizarCompra/Compra'
 import { CompraFinalizada } from '../Paginas/CompraFinalizada/CompraFinalizada'
@@ -9,7 +9,7 @@ export const Rutas = () => {
     return (
         <div>
 
-            <BrowserRouter>
+            <HashRouter>
 
             <ErrorBoundary>
 
@@ -28,7 +28,7 @@ export const Rutas = () => {
 
 
 
-            </BrowserRouter>
+                </HashRouter>
 
 
 

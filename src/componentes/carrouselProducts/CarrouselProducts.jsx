@@ -98,7 +98,7 @@ export const CarrouselProducts = () => {
                                 <img src={item.Imagen} alt='' />
                                 <div className='informacion'>
                                     <p>{item.Nombre}</p>
-                                    <p>$ {prueba.Precio}</p>
+                                    <p>$ {item.Precio}</p>
                                 </div>
                                 <button onClick={() => handleComprar(item.Nombre, item.Precio, item.Imagen)} className='btnAñadirC'>Añadir al Carrito</button>
                             </article>
